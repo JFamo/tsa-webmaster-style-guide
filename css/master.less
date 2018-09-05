@@ -1,0 +1,324 @@
+// Styling Source for BTCRIT style-guide
+// @author:Ethan Witherington etw9578@rit.edu
+
+// The below is a block comment and will
+// be included in the compiled css.
+/*
+Styling for BTCRIT style-guide.
+@author Ethan Witherington etw9578@rit.edu
+*/
+
+// ~~~~~ Variables ~~~~~
+
+@color_base:   #10668B;
+@color_accent: #DD7C10;
+
+@color_dark:  #1e1e1e;
+@color_darkgray:   #43494D;
+@color_gray:  #E9EBED;
+@color_lightgray:  #F5F5F5;
+@color_light: #FBFBFB;
+
+@font_important: 'Roboto', sans-serif;
+@font_ocean: 'Open Sans', sans-serif;
+
+@smartphones: ~"only screen and (max-width: 500px)";
+
+// ~~~~~ Mixins ~~~~~
+
+// colors
+.dark{
+    background-color: @color_dark;
+}
+.darkgray{
+    background-color: @color_darkgray;
+}
+.gray{
+    background-color: @color_gray;
+}
+.lightgray{
+    background-color: @color_lightgray;
+}
+.light{
+    background-color: @color_light;
+}
+.base{
+    background-color: @color_base;
+}
+.accent{
+    background-color: @color_accent;
+}
+
+// Drop-Shadows (From google material design)
+
+.shadow_1{// same as three?
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.shadow_2{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.shadow_3{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.shadow_4{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+// A E S T H E T I C
+.aesthetic{
+    letter-spacing: 0.5px;
+}
+
+// ~~~~~ Finally, the Style! ~~~~~
+// ~~~~~ Average, Default Components ~~~~~
+
+// Defaults inherited by Everything
+body{
+    // remove default margin
+    margin: 0;
+    // Put some space on the sides
+    padding: 0 2rem;
+    // Default font for Large Areas
+    font-family: @font_ocean;
+    // Reset everything to 125% base
+    font-size: 1.25rem;
+    // Line height makes everything tastier
+    // No units on this? still works? Not rem, not em...?
+    line-height: 1.5;
+    // Neutral Background Color
+    background-color: @color_lightgray;
+}
+// Sections of Content
+section{
+    // Separate Sections
+    margin-top: 6rem;
+}
+// Headers
+h1, h2{
+    font-family: @font_important;
+    font-weight: 700;
+    .aesthetic();
+    word-wrap: break-word;
+}
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 1.75rem;
+}
+hr{
+    // now this shit is whack.
+    border: 0;
+    background-color: @color_dark;
+    height: 1px;
+    margin: -1rem 50% 1rem 1rem;
+    // Center and Color if smol screen
+    @media @smartphones {
+        background-color: @color_accent;
+        margin: -1rem 0 1rem 0;
+    }
+}
+// Paragraph Content
+p, ul{
+    // indent content of sections
+    padding-left: 1rem;
+    // Keep things centered on Mobile.
+    @media @smartphones{
+        padding: 0;
+    }
+}
+a{
+    color: @color_base;
+}
+a:hover{
+    color: @color_accent;
+}
+
+// ~~~~~ Generic Custom Components ~~~~~
+
+// Make things not full width.
+// Stupid long lines are stupid hard to read.
+.notwide{
+    // 800px is tasty
+    max-width: 800px;
+    // Center this column
+    margin: 0 auto;
+}
+// Navigation Anchors
+.magic{
+    display: block;
+}
+// Containers for many other things
+.flex_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+// code highlighting
+.code{
+    background-color: @color_gray;
+    color: @color_dark;
+    padding: 0.25rem 0.5rem;
+    font-family: monospace;
+}
+
+// ~~~~~ Specific Custom Components ~~~~~
+
+// Title Bar / Header
+.header{
+    background-color: @color_base;
+    // margin fix
+    margin: 0 -2rem;
+    // Padding!
+    padding: 1rem;
+    // LESS Nesting is ******* awesome
+    .notwide{
+        justify-content: center;
+    }
+    // TODO there's supposed to be 2rem between img and h1.
+    // Logo
+    img{
+        width: 5rem;
+        margin: 1rem;
+        display: inline-block;
+        @media @smartphones {
+            width: 8rem;
+            max-width: 50%;
+        }
+    }
+    // Title Text
+    h1{
+        display: inline-block;
+        margin: 1rem;
+        color: @color_light;
+        text-align: center;
+    }
+}
+// Navigation Bar
+.navigation{
+    background-color: @color_dark;
+    // marign fix
+    margin: 0 -2rem;
+    .notwide{
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: @color_light;
+            margin: 1rem;
+            .aesthetic();
+        }
+        a:hover{
+            text-decoration: underline;
+            color: @color_accent;
+        }
+    }
+}
+// show our logos
+#logos img{
+    margin: 1rem;
+    padding: 2rem;
+    .shadow_2();
+}
+// brandspan
+.brand{
+    font-family: @font_important;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    margin: 1rem 1rem;
+    padding: 1rem;
+    background-color: @color_dark;
+    color: @color_light;
+    .shadow_2();
+    .aesthetic();
+}
+// color swatches
+.swatch{
+    border: 1px solid @color_dark;
+    margin: 1rem;
+    background-color: @color_light;
+    .shadow_2();
+    .color{
+        height: 3.75rem;
+    }
+    p{
+        margin: 1rem;
+        padding: 0;
+    }
+}
+// Boxes in the use of space section
+.box{
+    border: 1px solid @color_dark;
+    margin: 1rem;
+    padding: 1rem;
+    .shadow_2();
+    background-color: @color_light;
+}
+
+// ~~~~~ Buttons! ~~~~~
+.button{
+    margin: 1rem;
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-family: @font_important;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.25s ease, background-color 0.25s ease;
+    .aesthetic();
+}
+// Button Flavor: Accent
+.b_accent{
+    border: 0.15em solid @color_accent;
+    background-color: @color_light;
+    color: @color_accent;
+}
+.b_accent:hover{
+    background-color: @color_accent;
+    color: @color_light;
+}
+// Button Flavor: Base
+.b_base{
+    border: 0.15em solid @color_base;
+    background-color: @color_light;
+    color: @color_base;
+}
+.b_base:hover{
+    background-color: @color_base;
+    color: @color_light;
+}
+// Button Flavor: Dark
+.b_dark{
+    border: 0.15em solid @color_dark;
+    background-color: @color_light;
+    color: @color_dark;
+}
+.b_dark:hover{
+    background-color: @color_dark;
+    color: @color_light;
+}
+
+// ~~~~~ Big Background Image ~~~~~
+#bg{
+    overflow: hidden;
+    img{
+        filter: blur(2px);
+        max-width: 100%;
+    }
+}
+
+
+// ~~~~~ The Foot ~~~~~
+footer{
+    // margin fix
+    margin: 0 -2rem;
+    .notwide{
+        background-color: @color_dark;
+        color: @color_gray;
+        overflow: auto;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+}
