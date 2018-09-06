@@ -236,7 +236,7 @@ a:hover {
 footer {
   margin: 0 -2rem;
 }
-footer .notwide {
+footer {
   background-color: #1e1e1e;
   color: #E9EBED;
   overflow: auto;
