@@ -1,2 +1,2 @@
 # style-guide
-A compilation of the most recent BTCRIT brand assets, design decisions, and notes on how to use them.
+A website defining the style for our actual TSA Webmaster project, based on the style guide by Navigatron https://github.com/Navigatron
