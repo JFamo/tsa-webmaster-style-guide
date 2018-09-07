@@ -105,6 +105,12 @@ a:hover {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.flex_left{
+  justify-content: flex-start !important;
+}
+.flex_right{
+  justify-content: flex-end !important;
+}
 .code {
   background-color: #E9EBED;
   color: #1e1e1e;
@@ -191,6 +197,9 @@ a:hover {
 }
 .boximg{
   width:100%;
+}
+.half{
+  width:50%;
 }
 .button {
   margin: 1rem;
