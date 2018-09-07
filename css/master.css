@@ -197,6 +197,7 @@ a:hover {
 }
 .boximg{
   width:100%;
+  display:block;
 }
 .half{
   width:50%;
