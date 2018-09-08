@@ -24,6 +24,9 @@ Styling for TSA Webmaster style-guide.
 .accent {
   background-color: #d62828;
 }
+.hilight {
+  background-color: #3e92cc;
+}
 .shadow_1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -41,14 +44,17 @@ Styling for TSA Webmaster style-guide.
 }
 body {
   margin: 0;
-  padding: 0 2rem;
+  padding: 0 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
   background-color: #F5F5F5;
 }
 section {
-  margin-top: 6rem;
+  max-width:800px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin:0 auto;
 }
 h1,
 h2 {
@@ -59,9 +65,11 @@ h2 {
 }
 h1 {
   font-size: 2.5rem;
+  color: #0a2463;
 }
 h2 {
   font-size: 1.75rem;
+  color:#3e92cc;
 }
 hr {
   border: 0;
@@ -266,6 +274,21 @@ a:hover {
 .b_dark:hover {
   background-color: #1e1e1e;
   color: #FBFBFB;
+}
+.whitesection h1{
+  color:white;
+}
+.whitesection h2{
+  color:white;
+}
+.whitesection p{
+  color:white;
+}
+.whitesection li{
+  color:white;
+}
+.whitesection hr{
+  background-color:white;
 }
 footer {
   margin: 0 -2rem;
