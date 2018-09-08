@@ -275,6 +275,15 @@ a:hover {
   background-color: #1e1e1e;
   color: #FBFBFB;
 }
+.b_hilight{
+  border: 0.15em solid #3e92cc;
+  background-color:#FBFBFB;
+  color:#3e92cc;
+}
+.b_hilight:hover{
+  color:#FBFBFB;
+  background-color:#3e92cc;
+}
 .whitesection h1{
   color:white;
 }
