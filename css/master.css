@@ -296,6 +296,9 @@ a:hover {
 .whitesection li{
   color:white;
 }
+.whitesection a{
+  color:white;
+}
 .whitesection hr{
   background-color:white;
 }
