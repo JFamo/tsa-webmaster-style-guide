@@ -30,6 +30,7 @@
                 <a href="#type">Type</a>
                 <a href="#tone">Tone</a>
                 <a href="#space">Space</a>
+                <a href="#imgs">Images</a>
                 <a href="#web">Web</a>
             </div>
         </div>
@@ -269,15 +270,20 @@
             </section>
             <!-- Web Elements -->
             <section>
-                <a class="magic" id="web"></a>
-                <h1>Web Elements</h1>
+                <a class="magic" id="imgs"></a>
+                <h1>Images</h1>
                 <hr>
                 <p>
-                    Guidelines for special elements our site may include.
+                    Specifications for displaying images both alone and with text.
                 </p>
                 <h2>Box Picture</h2>
                 <p>A box picture is something sitting independently that doesn't flow very well with the content. These will definitely only be on the chapter half of the site.</p>
                 <div class="box imgbox">
+                    <img src="./images/bigblue.jpg" alt="" class="boximg">
+                </div>
+                <h2>Smaller Box Picture</h2>
+                <p>A box picture is something sitting independently that doesn't flow very well with the content. These will definitely only be on the chapter half of the site. This one is smaller, to see if we like it. If we do, I should change <b>imgbox</b> to have <i>width:60%; margin-right:auto; margin-left:auto;</i></p>
+                <div class="box imgbox" style="width:60%; margin-right:auto; margin-left:auto;">
                     <img src="./images/bigblue.jpg" alt="" class="boximg">
                 </div>
                 <h2>Picture and Right Text</h2>
@@ -287,19 +293,58 @@
                         <img src="./images/bigblue.jpg" alt="" class="boximg">
                     </div>
                     <p>
-                        This is a body of text. But it's not a short one, it's a long one, like, really long. It shows correct text wrapping. We want to write formally, but not academically. The feel of our website last year was satisfactory for this. We may want to consider the inclusion of 'Embrace the Succ' and probably ask Pennington for a new motto.
+                        This is a body of text. But it's not a short one, it's a long one, like, really long. It shows correct text wrapping. There are a few options for justifying text beside an image, which we will of course explore in this section. This will be the filler paragraph for all.
                     </p>
                 </div>
-                <h2>Picture and Left Text</h2>
-                <p>A picture with text on the left.</p>
+                <h2>Picture and left-Justified Left Text</h2>
+                <p>A picture with text on the left, left-justified.</p>
                 <div class="flex_container flex_right">
                     <p>
-                        This is a body of text.
+                        This is a body of text. But it's not a short one, it's a long one, like, really long. It shows correct text wrapping. There are a few options for justifying text beside an image, which we will of course explore in this section. This will be the filler paragraph for all.
                     </p>
                     <div class="box half">
                         <img src="./images/bigblue.jpg" alt="" class="boximg">
                     </div>
                 </div>
+                <h2>Picture and right-Justified Left Text</h2>
+                <p>A picture with text on the left, right-justified. I doubt we want this, but if we do, I need to change <b>flex_right</b> to have <i>text-align:right;</i></p>
+                <div class="flex_container flex_right" style="text-align:right;">
+                    <p>
+                        This is a body of text. But it's not a short one, it's a long one, like, really long. It shows correct text wrapping. There are a few options for justifying text beside an image, which we will of course explore in this section. This will be the filler paragraph for all.
+                    </p>
+                    <div class="box half">
+                        <img src="./images/bigblue.jpg" alt="" class="boximg">
+                    </div>
+                </div>
+                <h2>Boxless Picture and Right Text</h2>
+                <p>A boxless picture with text on the right.</p>
+                <div class="flex_container flex_left">
+                    <div class="half">
+                        <img src="./images/bigblue.jpg" alt="" class="boximg">
+                    </div>
+                    <p>
+                        This is a body of text. But it's not a short one, it's a long one, like, really long. It shows correct text wrapping. There are a few options for justifying text beside an image, which we will of course explore in this section. This will be the filler paragraph for all.
+                    </p>
+                </div>
+                <h2>Boxless Big Picture</h2>
+                <p>A big image but without the box. If we decide to use these, just remove the <b>box</b> class.</p>
+                <div class="imgbox">
+                    <img src="./images/bigblue.jpg" alt="" class="boximg">
+                </div>
+                <h2>Smaller Boxless Picture</h2>
+                <p>A smaller image but without the box. If we decide to use these, just remove the <b>box</b> class and use the small image specifications defined above.</p>
+                <div class="imgbox" style="width:60%; margin-right:auto; margin-left:auto;">
+                    <img src="./images/bigblue.jpg" alt="" class="boximg">
+                </div>
+            </section>
+            <!-- Web Elements -->
+            <section>
+                <a class="magic" id="web"></a>
+                <h1>Web Elements</h1>
+                <hr>
+                <p>
+                    Guidelines for special elements our site.
+                </p>
                 <h2>Box-Shadow</h2>
                 <div class="box">
                     Hi! I'm a box.
@@ -320,7 +365,6 @@
                     </a>
                 </div>
                 <h2>Footer:</h2>
-            </section>
         </div>
         <footer>
             <div class="notwide">
