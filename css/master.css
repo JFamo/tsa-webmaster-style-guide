@@ -45,7 +45,7 @@ Styling for TSA Webmaster style-guide.
 body {
   margin: 0;
   padding: 0 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 1.25rem;
   line-height: 1.5;
   background-color: #F5F5F5;
@@ -58,7 +58,7 @@ section {
 }
 h1,
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: 0.5px;
   word-wrap: break-word;
