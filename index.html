@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>BTCRIT style-guide</title>
+        <title>Webmaster Style Guide</title>
         <link rel="stylesheet" href="./css/master.css">
         <!--
             OLD
@@ -23,29 +23,35 @@
                 Poppins 700
         -->
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700|Poppins:400,700" rel="stylesheet">
+        <!--
+            Imports Fullpage JS and CSS
+        -->
+        <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+        <script type="text/javascript" src="js/fullpage.js"></script>
         <!-- For Mobile Users -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="header">
-            <div class="notwide flex_container">
-                <img src="./images/logo.png" alt="">
-                <h1>TSA Webmaster Style-Guide</h1>
+    <div id="fullpage">
+        <div class='section fp-auto-height-responsive'>
+            <div class="header">
+                <div class="notwide flex_container">
+                    <img src="./images/logo.png" alt="">
+                    <h1>TSA Webmaster Style-Guide</h1>
+                </div>
             </div>
-        </div>
-        <div class="navigation">
-            <div class="notwide flex_container">
-                <a href="#ethos">Ethos</a>
-                <a href="#brand">Logo/Name</a>
-                <a href="#color">Colors</a>
-                <a href="#type">Type</a>
-                <a href="#tone">Tone</a>
-                <a href="#space">Space</a>
-                <a href="#imgs">Images</a>
-                <a href="#web">Web</a>
+            <div class="navigation">
+                <div class="notwide flex_container">
+                    <a href="#ethos">Ethos</a>
+                    <a href="#brand">Logo/Name</a>
+                    <a href="#color">Colors</a>
+                    <a href="#type">Type</a>
+                    <a href="#tone">Tone</a>
+                    <a href="#space">Space</a>
+                    <a href="#imgs">Images</a>
+                    <a href="#web">Web</a>
+                </div>
             </div>
-        </div>
-        <div>
             <!-- Why the Style Guide? -->
             <section>
                 <h1>Style Guide?</h1>
@@ -55,8 +61,9 @@
                 </p>
                 <p> This style guide was created for Boyertown TSA's 2018-19 webmaster team, based on the original style guide from RIT's BTC club by Ethan Witherington.</p>
             </section>
+        </div>
             <!-- Brand Ethos -->
-            <div class="base whitesection">
+            <div class="base whitesection section">
             <section>
                 <a class="magic" id="ethos"></a>
                 <h1>Brand Ethos</h1>
@@ -87,7 +94,7 @@
             </section>
             </div>
             <!-- Logo/Brandname -->
-            <div class="gray">
+            <div class="gray section">
             <section>
                 <a class="magic" id="brand"></a>
                 <h1>Logo, Brandname</h1>
@@ -137,7 +144,7 @@
             </section>
             </div>
             <!-- Color -->
-            <section>
+            <section class="section">
                 <a class="magic" id="color"></a>
                 <h1>Color Palette</h1>
                 <hr>
@@ -204,7 +211,7 @@
                 </p>
             </section>
             <!-- Typography -->
-            <div class="gray">
+            <div class="gray section">
             <section>
                 <a class="magic" id="type"></a>
                 <h1>Typography</h1>
@@ -243,7 +250,7 @@
             </section>
             </div>
             <!-- Voice and Writing Style -->
-            <section>
+            <section class="section">
                 <a class="magic" id="tone"></a>
                 <h1>Tone, Voice, and General Feel</h1>
                 <hr>
@@ -268,7 +275,7 @@
                 </p>
             </section>
             <!-- WhiteSpace, Margins -->
-            <div class="base whitesection">
+            <div class="base whitesection section">
             <section>
                 <a class="magic" id="space"></a>
                 <h1>Use of space</h1>
@@ -300,7 +307,7 @@
             </section>
             </div>
             <!-- Web Elements -->
-            <section>
+            <section class="section">
                 <a class="magic" id="imgs"></a>
                 <h1>Images</h1>
                 <hr>
@@ -369,7 +376,7 @@
                 </div>
             </section>
             <!-- Web Elements -->
-            <section>
+            <section class="section">
                 <a class="magic" id="web"></a>
                 <h1>Web Elements</h1>
                 <hr>
@@ -399,7 +406,7 @@
                     </a>
                 </div>
                 <h2>Footer:</h2>
-        </div>
+            </section>
         <footer>
             <div class="notwide">
                 <p>
@@ -412,5 +419,17 @@
         <script>
             var scroll = new SmoothScroll('a[href*="#"]');
         </script>
+    </div>
+    <script>
+        new fullpage('#fullpage', {
+            //options here
+            autoScrolling:true,
+            scrollHorizontally: true,
+            licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+        });
+
+        //methods
+        fullpage_api.setAllowScrolling(true);
+    </script>
     </body>
 </html>
